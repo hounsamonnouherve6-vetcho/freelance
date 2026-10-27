@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>PETRO PALACE — Restaurant africain à Sèmè-Podji, Bénin</title>
+<meta name="description" content="Restaurant de spécialités d'Afrique de l'Ouest à Sèmè-Podji (Bénin) : repas sur place, vente à emporter et livraison sans contact. Réservez ou commandez.">
+<meta name="theme-color" content="#12382D">
+<meta property="og:type" content="website">
+<meta property="og:title" content="PETRO PALACE — Restaurant africain à Sèmè-Podji">
+<meta property="og:description" content="L'élégance rencontre les saveurs d'Afrique.">
+<meta property="og:locale" content="fr_BJ">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"Restaurant","name":"RESTAURANT PETRO PALACE","servesCuisine":"Cuisine ouest-africaine",
+"address":{"@type":"PostalAddress","addressLocality":"Sèmè-Podji","addressCountry":"BJ"},
+"aggregateRating":{"@type":"AggregateRating","ratingValue":"4.7","reviewCount":"52"},
+"hasMap":"https://www.google.com/maps/search/?api=1&query=9JM3%2BW4J%20S%C3%A8m%C3%A8-Podji"}
+</script>
+</head>
+<body>
+<a class="skip" href="#accueil">Aller au contenu</a>
+
+<header class="header">
+  <div class="wrap bar">
+    <a class="logo" href="#accueil" aria-label="PETRO PALACE — accueil">PETRO PALACE</a>
+    <nav id="nav" aria-label="Navigation principale">
+      <a href="#accueil">Accueil</a><a href="#histoire">Notre histoire</a><a href="#carte">La carte</a>
+      <a href="#galerie">Galerie</a><a href="#avis">Avis clients</a><a href="#contact">Contact</a>
+      <a class="btn btn-gold nav-cta" href="#reservation">Réserver une table</a>
+    </nav>
+    <button class="burger" id="burger" aria-expanded="false" aria-controls="nav" aria-label="Ouvrir le menu"><span></span><span></span><span></span></button>
+  </div>
+</header>
+
+<main>
+<section class="hero" id="accueil">
+  <div class="wrap hero-in">
+    <h1>PETRO PALACE — L'élégance rencontre les saveurs d'Afrique.</h1>
+    <p>Découvrez une expérience culinaire chaleureuse dans un cadre raffiné au cœur de Sèmè-Podji.</p>
+    <div class="actions"><a class="btn btn-gold" href="#carte">Découvrir notre carte</a><a class="btn btn-line" href="#reservation">Réserver une table</a></div>
+    <p class="note-img">Visuel d'ambiance temporaire (illustration, pas une photo du restaurant).</p>
+  </div>
+</section>
+
+<section class="sec wrap">
+  <h2>Bienvenue chez PETRO PALACE</h2>
+  <p class="lead">Une table de spécialités ouest-africaines, un cadre chic où la nature est invitée en ville, un accueil chaleureux et une atmosphère relaxante, avec une musique agréable sans trop de bruit.</p>
+  <div class="grid4">
+    <article class="card"><h3>Cuisine savoureuse</h3><p>La gastronomie d'Afrique de l'Ouest, servie avec soin.</p></article>
+    <article class="card"><h3>Cadre élégant et naturel</h3><p>Un décor coquet qui ramène la nature en ville.</p></article>
+    <article class="card"><h3>Service chaleureux</h3><p>Un accueil attentif du début à la fin du repas.</p></article>
+    <article class="card"><h3>Ambiance relaxante</h3><p>Un lieu convivial pour se détendre et profiter.</p></article>
+  </div>
+  <p class="services">Sur place · À emporter · Livraison sans contact</p>
+</section>
+
+<section class="sec band" id="histoire">
+  <div class="wrap narrow">
+    <h2>Notre histoire</h2>
+    <p>PETRO PALACE est un restaurant de spécialités d'Afrique de l'Ouest situé à Sèmè-Podji. Notre philosophie : une hospitalité sincère, une cuisine généreuse et un cadre pensé pour que chaque moment passé à notre table soit mémorable.</p>
+    <p>Les clients parlent de confort, d'accueil et de sérénité. C'est cette expérience que nous voulons offrir à chaque visite.</p>
+    <p class="todo" data-editable>À compléter par le propriétaire : date de création, fondateur, chef, parcours. Aucune information officielle n'a encore été fournie.</p>
+  </div>
+</section>
+
+<section class="sec wrap" id="carte">
+  <h2>Notre carte</h2>
+  <p class="warn">Plats et prix ci-dessous = <strong>exemples de démonstration</strong>. La carte officielle sera ajoutée après validation par le restaurant.</p>
+  <div class="tools">
+    <label class="sr" for="search">Rechercher un plat</label>
+    <input id="search" type="search" placeholder="Rechercher un plat…">
+    <div id="filters" class="filters" role="group" aria-label="Catégories"></div>
+  </div>
+  <div id="dishes" class="grid3" aria-live="polite"></div>
+</section>
+
+<section class="sec band" id="commande">
+  <div class="wrap two">
+    <div>
+      <h2>Ma commande</h2>
+      <ul id="cart" class="cart"></ul>
+      <p class="total">Sous-total : <strong id="total">0 FCFA</strong></p>
+      <p class="small">Les frais de livraison éventuels seront communiqués par le restaurant. Aucun paiement en ligne : la commande est transmise par WhatsApp.</p>
+    </div>
+    <form id="orderForm" novalidate>
+      <fieldset><legend>Mode de réception</legend>
+        <label class="radio"><input type="radio" name="mode" value="Retrait sur place" checked> Retrait</label>
+        <label class="radio"><input type="radio" name="mode" value="Livraison"> Demande de livraison</label>
+      </fieldset>
+      <label>Nom<input name="name" autocomplete="name"><span class="err"></span></label>
+      <label>Téléphone<input name="phone" type="tel" autocomplete="tel"><span class="err"></span></label>
+      <label id="addrRow" hidden>Adresse de livraison<input name="address"><span class="err"></span></label>
+      <label>Observations<textarea name="notes" rows="2"></textarea></label>
+      <input class="hp" name="website" tabindex="-1" autocomplete="off" aria-hidden="true">
+      <button class="btn btn-gold" type="submit">Envoyer ma commande par WhatsApp</button>
+      <p class="status" id="orderStatus" role="status"></p>
+    </form>
+  </div>
+</section>
+
+<section class="sec wrap" id="reservation">
+  <h2>Réserver une table</h2>
+  <p class="lead">Votre demande n'est <strong>pas confirmée</strong> tant que le restaurant ne vous a pas répondu.</p>
+  <form id="resForm" class="formgrid" novalidate>
+    <label>Nom<input name="name" autocomplete="name"><span class="err"></span></label>
+    <label>Téléphone<input name="phone" type="tel" autocomplete="tel"><span class="err"></span></label>
+    <label>Date<input name="date" type="date"><span class="err"></span></label>
+    <label>Heure<input name="time" type="time"><span class="err"></span></label>
+    <label>Nombre de personnes<input name="guests" type="number" min="1" max="30" value="2"><span class="err"></span></label>
+    <label class="full">Demande particulière<textarea name="note" rows="2"></textarea></label>
+    <input class="hp" name="website" tabindex="-1" autocomplete="off" aria-hidden="true">
+    <button class="btn btn-dark full" type="submit">Préparer ma demande</button>
+  </form>
+  <div id="resSummary" class="summary" hidden></div>
+</section>
+
+<section class="sec band" id="galerie">
+  <div class="wrap">
+    <h2>Galerie</h2>
+    <p class="warn">Illustrations temporaires : les photographies authentiques de PETRO PALACE remplaceront ces visuels.</p>
+    <div id="gfilters" class="filters" role="group" aria-label="Filtrer la galerie"></div>
+    <div id="gallery" class="gallery"></div>
+  </div>
+</section>
+
+<section class="sec wrap" id="avis">
+  <h2>Avis clients</h2>
+  <p class="rating"><strong>4,7 / 5</strong> sur Google · 52 avis <span class="small">(chiffres susceptibles d'évoluer)</span></p>
+  <div id="reviews" class="grid3"></div>
+  <div class="actions">
+    <a class="btn btn-dark" target="_blank" rel="noopener" href="https://www.google.com/maps/search/?api=1&query=9JM3%2BW4J%20S%C3%A8m%C3%A8-Podji">Lire les avis sur Google Maps</a>
+    <a class="btn btn-line-dark" target="_blank" rel="noopener" href="https://www.google.com/maps/search/?api=1&query=9JM3%2BW4J%20S%C3%A8m%C3%A8-Podji">Donner votre avis</a>
+  </div>
+</section>
+
+<section class="sec band" id="contact">
+  <div class="wrap two">
+    <div>
+      <h2>Nous trouver</h2>
+      <address>RESTAURANT PETRO PALACE<br>Sèmè-Podji, Bénin<br>Plus Code : 9JM3+W4J</address>
+      <p id="phoneLine"></p>
+      <p class="todo" id="hoursLine"></p>
+      <div class="actions">
+        <a class="btn btn-gold" id="callBtn" href="#">Appeler maintenant</a>
+        <a class="btn btn-dark" id="waBtn" href="#">WhatsApp</a>
+        <a class="btn btn-line-dark" id="routeBtn" target="_blank" rel="noopener" href="#">Obtenir l'itinéraire</a>
+      </div>
+      <form id="contactForm" novalidate>
+        <h3>Nous écrire</h3>
+        <label>Nom<input name="name"><span class="err"></span></label>
+        <label>Message<textarea name="message" rows="3"></textarea><span class="err"></span></label>
+        <input class="hp" name="website" tabindex="-1" autocomplete="off" aria-hidden="true">
+        <button class="btn btn-dark" type="submit">Envoyer par WhatsApp</button>
+        <p class="status" id="contactStatus" role="status"></p>
+      </form>
+    </div>
+    <iframe id="map" title="Carte Google Maps — PETRO PALACE" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+  </div>
+</section>
+</main>
+
+<footer class="footer">
+  <div class="wrap">
+    <strong class="logo light">PETRO PALACE</strong>
+    <p>Sèmè-Podji, Bénin · <span id="footPhone"></span></p>
+    <p class="small" id="socials">Réseaux sociaux : à renseigner.</p>
+    <p class="small">Mentions légales et politique de confidentialité : à fournir par le propriétaire. Aucun cookie de suivi n'est utilisé sur ce site.</p>
+    <p class="small">© <span id="year"></span> RESTAURANT PETRO PALACE</p>
+  </div>
+</footer>
+
+<nav class="mbar" aria-label="Actions rapides">
+  <a id="mCall" href="#">Appeler</a><a id="mRoute" target="_blank" rel="noopener" href="#">Itinéraire</a>
+  <a href="#reservation">Réserver</a><a href="#commande">Commander<span id="badge" class="badge" hidden>0</span></a>
+</nav>
+
+<div id="lightbox" class="lightbox" role="dialog" aria-modal="true" aria-label="Galerie" hidden>
+  <button id="lbClose" aria-label="Fermer">×</button>
+  <button id="lbPrev" aria-label="Photo précédente">‹</button>
+  <figure id="lbFig"></figure>
+  <button id="lbNext" aria-label="Photo suivante">›</button>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
